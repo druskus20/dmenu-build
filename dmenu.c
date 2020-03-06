@@ -843,17 +843,13 @@ readxresources(void) {
 			colors[SchemeSel][ColFg] = strdup(xval.addr);
 		else
 			colors[SchemeSel][ColFg] = strdup(colors[SchemeSel][ColFg]);
-
-		if (XrmGetResource(xdb, "Dmenu.border", "*", &type, &xval)){
-			printf("type b: %d", *type);
+		
+		// new
+		if (XrmGetResource(xdb, "Dmenu.border", "*", &type, &xval))
 			border_width = atoi(strdup(xval.addr));
-		}
-
-
-		if (XrmGetResource(xdb, "Dmenu.center", "*", &type, &xval)){
-			printf("type c: %d", *type);
+		if (XrmGetResource(xdb, "Dmenu.center", "*", &type, &xval))
 			centered = atoi(strdup(xval.addr));
-		}
+
 
 
 		XrmDestroyDatabase(xdb);
