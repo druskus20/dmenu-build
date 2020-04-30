@@ -1,24 +1,5 @@
-dmenu - dynamic menu
-====================
-dmenu is an efficient dynamic menu for X.
+# dmenu-build
 
+This is my own build of suckless's dmenu. I use it for many of my scripts and I've patched it and modified it myself.
 
-Requirements
-------------
-In order to build dmenu you need the Xlib header files.
-
-
-Installation
-------------
-Edit config.mk to match your local setup (dmenu is installed into
-the /usr/local namespace by default).
-
-Afterwards enter the following command to build and install dmenu
-(if necessary as root):
-
-    make clean install
-
-
-Running dmenu
--------------
-See the man page for details.
+See more at [suckless website](https://tools.suckless.org/dmenu/)
